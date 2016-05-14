@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YoutubePage</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="page.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>YouTube</title>
+
+</head>
+
+<body>
+  <nav>
+      <!-- Top Nav Menu -->
+  <ul>
+    <li>Youtube</li>
+    <li><i class="fa fa-bell-o" aria-hidden="true"></i><li>
+      <li><form>
+        <input type="text" required>
+        <input type="reset" value="search">
+      </form></li>
+
+    <li><i class="fa fa-cog"></i></li>
+    <form id="upload" action="handler.php" method="POST">
+      <input type="file" id="file-select" name="video" multiple/>
+      <button type="submit" id="upload-button">Upload</button>
+    </form>
+    <!-- <li><button type="button">UPLOAD</button></li> -->
+</ul>
+
+</nav>
+  <div id="container">
+<!-- Main Video -->
+  <div class="main-video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uxpDa-c-4Mc" frameborder="0" allowfullscreen></iframe>
+<!-- <img src="imgs/drake.png" class="img-responsive" alt="Responsive image"> -->
+  </div>
+
+  <div class="description">
+      <p = id="video-title">Drake - Hotline Bling</p>
+      <p = id="artistname">Drake</p> </br></br>
+      <p class"about"> Morbi sizzle. Dawg potenti. Its fo rizzle fo.
+    Gangster elizzle shizzlin dizzle, ullamcorpizzle quis, ullamcorpizzle phat,
+    scelerisque brizzle, fo shizzle my nizzle. Crunk fo shizzle dang.</p>
+
+  </div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
